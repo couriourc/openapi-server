@@ -1,0 +1,18 @@
+
+declare module "{{moduleName}}" {
+
+interface OpenAPIServer {
+  _requestor: typeof fetch
+}
+
+export function setup(callback:(ref:Requestor)=>any);
+
+
+let ref:OpenAPIServer = {
+  requestor: fetch
+};
+
+{{#apis}}
+  export function {{operationId}}(params:any):ReturnType<OpenAPIServer["requestor"]>
+{{/apis }}
+}

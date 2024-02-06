@@ -1,0 +1,1 @@
+export const PACKAGE_NAME = "~openapi-server" as const;

@@ -23,7 +23,8 @@
   "include": [
     "src",
     "./vite-plugins",
-    "./vite-plugins/client.d.ts"
+    "./vite-plugins/client.d.ts",
+    "./env.d.ts"
   ],
   "exclude": [
     "__test__"

@@ -1,24 +1,35 @@
 declare module "~openapi-server" {
-interface Requestor {
-  requestor: any
-}
-export function setup(callback:(ref:Requestor)=>any);
 
 
-let ref:Requestor = {
-  requestor: fetch
-};
+    export function setup(callback: (ref: Requestor) => any);
 
-export  function GetPets():ReturnType<typeof ref.requestor>;
-export  function PostPets():ReturnType<typeof ref.requestor>;
-export  function PatchPets():ReturnType<typeof ref.requestor>;
-export  function GetPetsById():ReturnType<typeof ref.requestor>;
-export  function DeletePetsById():ReturnType<typeof ref.requestor>;
-export  function GetItems():ReturnType<typeof ref.requestor>;
-export  function PostItems():ReturnType<typeof ref.requestor>;
-export  function PostBody():ReturnType<typeof ref.requestor>;
-export  function PostDemoFormsMultipart():ReturnType<typeof ref.requestor>;
-export  function PostDemoFormsMultipartWithFiles():ReturnType<typeof ref.requestor>;
-export  function PostDemoFormsUrlEncoded():ReturnType<typeof ref.requestor>;
-export  function GetDemoFeedback():ReturnType<typeof ref.requestor>;
+
+    let ref: OpenAPIServer = {
+        requestor: fetch
+    };
+
+
+    export function GetPets(params: any): ReturnType<>
+
+    export function PostPets(params: any): ReturnType<OpenAPIServer["requestor"]>
+
+    export function PatchPets(params: any): ReturnType<OpenAPIServer["requestor"]>
+
+    export function GetPetsById(params: any): ReturnType<OpenAPIServer["requestor"]>
+
+    export function DeletePetsById(params: any): ReturnType<OpenAPIServer["requestor"]>
+
+    export function GetItems(params: any): ReturnType<OpenAPIServer["requestor"]>
+
+    export function PostItems(params: any): ReturnType<OpenAPIServer["requestor"]>
+
+    export function PostBody(params: any): ReturnType<OpenAPIServer["requestor"]>
+
+    export function PostDemoFormsMultipart(params: any): ReturnType<OpenAPIServer["requestor"]>
+
+    export function PostDemoFormsMultipartWithFiles(params: any): ReturnType<OpenAPIServer["requestor"]>
+
+    export function PostDemoFormsUrlEncoded(params: any): ReturnType<OpenAPIServer["requestor"]>
+
+    export function GetDemoFeedback(params: any): ReturnType<OpenAPIServer["requestor"]>
 }
